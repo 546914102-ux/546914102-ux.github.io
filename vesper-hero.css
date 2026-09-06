@@ -1,0 +1,65 @@
+html,body{background:#000!important;color:#fff}
+.topbar[hidden]{display:none!important}
+#home.vesper{--h1:48px;--lede:15.5px;--header-x:40px;--header-y:22px;--stats-x:72px;--stats-y:36px;--hero-gap:85px;--copy-max:860px;--lede-max:470px;position:relative;top:auto;height:100svh;min-height:560px;padding:0;background:#000;color:#fff;overflow:hidden;isolation:isolate;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+#home.vesper:before,#home.vesper:after{display:none}
+.vesper *{box-sizing:border-box;margin:0;padding:0}
+.ves-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;transform:translateY(105%) scale(1.015);transition:transform 1.15s cubic-bezier(.16,1,.3,1);will-change:transform}
+.vesper.vice-intro-complete .ves-video{transform:translateY(0) scale(1)}
+.vice-intro{position:absolute;inset:0;z-index:120;display:grid;place-items:center;background:#000;pointer-events:none;visibility:visible}
+.vesper.vice-intro-complete .vice-intro{visibility:hidden}
+.vice-intro-word{display:flex;align-items:center;justify-content:center;font-family:Inter,Arial,sans-serif;font-size:clamp(18px,2.6vw,42px);font-weight:800;line-height:.9;letter-spacing:-.045em;color:#fff;white-space:nowrap;overflow:hidden;padding:.25em .08em}
+.vice-intro-word i{display:block;width:.32em}
+.vice-intro-word span{display:inline-block;opacity:0;transform:translateY(125%);filter:blur(4px);animation:vice-letter .68s cubic-bezier(.16,1,.3,1) forwards;will-change:transform,opacity}
+.vice-intro-word span:nth-child(1){animation-delay:.12s}.vice-intro-word span:nth-child(2){animation-delay:.22s}.vice-intro-word span:nth-child(3){animation-delay:.32s}.vice-intro-word span:nth-child(4){animation-delay:.42s}.vice-intro-word span:nth-child(6){animation-delay:.68s}.vice-intro-word span:nth-child(7){animation-delay:.78s}.vice-intro-word span:nth-child(8){animation-delay:.88s}.vice-intro-word span:nth-child(9){animation-delay:.98s}.vice-intro-word span:nth-child(10){animation-delay:1.08s}.vice-intro-word span:nth-child(11){animation-delay:1.18s}
+@keyframes vice-letter{0%{opacity:0;transform:translateY(125%);filter:blur(4px)}68%{opacity:1;transform:translateY(-10%);filter:none}84%{transform:translateY(3%)}100%{opacity:1;transform:translateY(0);filter:none}}
+.ves-page{position:relative;z-index:1;display:grid;grid-template-rows:auto 1fr auto;height:100%;min-height:inherit;transform:translateY(105%);transition:transform 1.15s cubic-bezier(.16,1,.3,1);will-change:transform}
+.vesper.vice-intro-complete .ves-page{transform:translateY(0)}
+.ves-header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:var(--header-y) var(--header-x) 10px;position:relative;z-index:50}
+.ves-logo{display:inline-flex;align-items:center;gap:9px;justify-self:start;font-size:15.5px;font-weight:600;letter-spacing:-.03em}
+.ves-logo svg{width:22px;height:22px}.ves-suffix{font-weight:400}
+.ves-nav{display:flex;gap:8px;align-items:center;justify-self:center}
+.ves-nav a{height:40px;padding:0 18px;border-radius:7px;border:1px solid rgba(198,198,198,.55);background:linear-gradient(105deg,#050505,#2a2a2a 48%,#4a4a4a);font-size:14px;letter-spacing:-.01em;display:inline-flex;align-items:center;white-space:nowrap;position:relative;overflow:hidden;transition:background .35s,border-color .35s,box-shadow .35s}
+.ves-nav a:before,.ves-btn:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,#ffffff55 48%,transparent 76%);transform:translateX(-130%);transition:transform .65s;pointer-events:none}
+.ves-nav a:hover:before,.ves-btn:hover:after{transform:translateX(130%)}
+.ves-nav a:hover{border-color:#ebebeb;background:linear-gradient(105deg,#111,#3a3a3a 45%,#6a6a6a);box-shadow:0 0 18px #c8d2e62e}
+.ves-btn{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 16px;border-radius:6px;font-size:13.5px;font-weight:500;letter-spacing:-.02em;line-height:1;white-space:nowrap;transition:background .35s,box-shadow .35s}
+.ves-solid{background:linear-gradient(#fff,#e7e7e7 48%,#cfcfcf);color:#111;border:1px solid white;box-shadow:inset 0 1px 0 #fffffff2}
+.ves-solid:hover{background:linear-gradient(#fff,#f3f6ff 42%,#d5def2);box-shadow:0 0 26px #bad0ff66,0 8px 18px #ffffff24}
+.ves-ghost{background:linear-gradient(135deg,#ffffff1f,#00000080 46%,#96aac81a);border:1px solid #c6c6c68c;backdrop-filter:blur(16px);color:white}
+.ves-ghost:hover{box-shadow:0 0 24px #aac8ff47;border-color:#dce6ffcc}
+.ves-header-cta{justify-self:end}
+.ves-main{display:flex;align-items:flex-end;justify-content:center;padding:8px 24px var(--hero-gap);min-height:0}
+.ves-copy{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;max-width:var(--copy-max);width:100%}
+.ves-badge{display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;padding:9px 15px;border-radius:5px;background:linear-gradient(90deg,#7d7d7d,#2a2a2a 52%,#0a0a0a);font-size:12.5px;letter-spacing:-.01em}
+.ves-star{width:18px;height:20px;filter:drop-shadow(0 0 3px #ffffff73);animation:ves-star .9s .28s both}
+#home.vesper h1{font-family:Inter,system-ui,sans-serif;font-size:var(--h1);font-weight:500;letter-spacing:-.045em;line-height:1.12;margin:0;animation:none}
+.ves-headline{display:block;overflow:hidden;padding:.06em .15em .14em}.ves-headline>span{display:block}
+#home.vesper h1 em{font-family:"Instrument Serif","Times New Roman",Times,serif;font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:-.03em;color:#9a9a9a;animation:ves-em 1.2s .72s both}
+.ves-lede{max-width:var(--lede-max);margin-top:18px;color:#9a9a9a;font-size:var(--lede);line-height:1.55;letter-spacing:-.015em;animation-duration:1.25s!important}
+.ves-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}.ves-actions .ves-btn{height:42px;padding:0 18px}
+.ves-stats{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 var(--stats-x) max(var(--stats-y),env(safe-area-inset-bottom));color:#d8d8d8}
+.ves-stat{display:inline-flex;align-items:center;gap:14px;font-size:13.5px;letter-spacing:-.015em;white-space:nowrap}.ves-stat svg{width:20px;height:20px;flex-shrink:0}.ves-stat .ves-wide-icon{width:38px;height:21px}
+.ves-burger,.ves-backdrop{display:none}
+.ves-appear{opacity:1;animation-duration:1.05s;animation-fill-mode:both;animation-timing-function:cubic-bezier(.16,1,.3,1);animation-delay:var(--d,.08s)}
+.ves-scale{animation-name:ves-scale}.ves-soft{animation-name:ves-soft}.ves-mask{animation-name:ves-mask}.ves-pop{animation-name:ves-pop}.ves-btn-in{animation-name:ves-btn}.ves-side{animation-name:ves-side}.ves-stat-in{animation-name:ves-stat}
+.ves-appear.is-in{animation:none;opacity:1;transform:none;filter:none}
+@keyframes ves-scale{from{opacity:0;transform:scale(.84)}to{opacity:1;transform:none}}
+@keyframes ves-soft{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes ves-mask{from{opacity:0;transform:translateY(40%)}to{opacity:1;transform:none}}
+@keyframes ves-pop{0%{opacity:0;transform:scale(.9)}70%{transform:scale(1.03)}100%{opacity:1;transform:none}}
+@keyframes ves-btn{from{opacity:0;transform:translateY(18px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes ves-side{from{opacity:0;transform:translateX(22px)}to{opacity:1;transform:none}}
+@keyframes ves-stat{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes ves-star{0%{transform:scale(.2) rotate(-50deg)}65%{transform:scale(1.2) rotate(8deg)}100%{transform:none}}
+@keyframes ves-em{from{opacity:.35;filter:blur(4px)}to{opacity:1;filter:none}}
+.vesper a:focus-visible,.vesper button:focus-visible{outline:2px solid white;outline-offset:5px}
+@media(min-width:1280px) and (max-width:1599px){#home.vesper{--h1:54px;--lede:16px;--header-x:48px;--stats-x:80px;--copy-max:900px}}
+@media(min-width:1600px){#home.vesper{--h1:64px;--lede:18px;--header-y:28px;--header-x:64px;--stats-x:96px;--stats-y:44px;--copy-max:980px;--lede-max:540px}.ves-logo{font-size:17px}.ves-nav a{font-size:15px;height:44px;padding:0 20px}.ves-btn{height:44px;font-size:15px}.ves-actions .ves-btn{height:48px}.ves-stat{font-size:15px}}
+@media(min-width:1920px){#home.vesper{--h1:76px;--lede:20px;--header-y:32px;--header-x:80px;--stats-x:120px;--stats-y:52px;--copy-max:1120px;--lede-max:620px}.ves-actions .ves-btn{height:52px}}
+@media(min-width:2560px){#home.vesper{--h1:88px;--lede:22px;--header-x:120px;--stats-x:160px;--copy-max:1280px;--lede-max:680px}}
+@media(min-width:901px) and (max-width:1279px){#home.vesper{--h1:42px;--lede:15px;--header-y:16px;--header-x:28px;--stats-x:36px;--stats-y:28px;--hero-gap:64px}.ves-stat{font-size:12.5px}.ves-nav a{height:36px;padding:0 14px;font-size:13px}}
+@media(min-width:901px) and (max-height:850px){#home.vesper{--header-y:14px;--stats-y:24px;--hero-gap:48px;--h1:40px}.ves-badge{margin-bottom:12px}.ves-lede{margin-top:12px}.ves-actions{margin-top:16px}}
+@media(min-width:901px) and (max-height:720px){#home.vesper{--h1:34px;--lede:14px;--hero-gap:32px;--stats-y:18px}.ves-badge{margin-bottom:8px}}
+@media(max-width:900px){#home.vesper{--h1:36px;--lede:16.5px;--header-x:18px;--header-y:16px;--stats-x:20px;--stats-y:28px;height:auto;min-height:100svh}.ves-page{min-height:100svh}.ves-header{grid-template-columns:1fr auto auto;gap:8px}.ves-logo,.ves-header-cta,.ves-burger{z-index:80}.ves-logo{font-size:16px}.ves-btn{height:46px;font-size:15px}.ves-main{padding:100px 20px 64px}.ves-copy{max-width:100%}.ves-stats{flex-direction:column;gap:16px}.ves-stat{font-size:15px;white-space:normal}.ves-burger{display:grid;align-content:center;justify-content:center;gap:5px;width:42px;height:42px;border:1px solid #ffffff29;border-radius:6px;background:#0808088c;position:relative;cursor:pointer}.ves-burger span{width:16px;height:1.5px;border-radius:1px;background:white;transition:transform .25s,opacity .2s}.ves-nav{position:absolute;inset:0;min-height:100svh;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:96px 22px 32px;visibility:hidden;opacity:0;z-index:45;transition:opacity .28s,visibility .28s}.ves-nav a{width:100%;height:56px;font-size:19px;border-radius:10px;justify-content:center}.ves-backdrop{display:block;position:absolute;inset:0;background:#0808086b;z-index:40;opacity:0;visibility:hidden;transition:opacity .28s,visibility .28s}.vesper.ves-menu-open .ves-nav,.vesper.ves-menu-open .ves-backdrop{opacity:1;visibility:visible}.vesper.ves-menu-open .ves-backdrop{backdrop-filter:blur(24px)}.ves-menu-open .ves-burger span:first-child{transform:translateY(6.5px) rotate(45deg)}.ves-menu-open .ves-burger span:nth-child(2){opacity:0}.ves-menu-open .ves-burger span:last-child{transform:translateY(-6.5px) rotate(-45deg)}.ves-actions .ves-btn{height:48px}}
+@media(max-width:560px){#home.vesper{--h1:34px;--lede:16px;--header-x:16px}.ves-actions{flex-direction:column;width:100%}.ves-actions .ves-btn{width:100%}.ves-main{padding-top:150px}.ves-header-cta{font-size:12px;padding:0 10px}}
+@media(prefers-reduced-motion:reduce){.vesper *,.vesper *:before,.vesper *:after{animation:none!important;transition:none!important}.ves-appear,#home.vesper h1 em,.ves-star{opacity:1;transform:none;filter:none}}

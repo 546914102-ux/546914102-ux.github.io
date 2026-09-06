@@ -1,0 +1,14 @@
+/* Horizontal video-reference layout overrides the earlier diagonal arrangement. */
+#projects .work-grid.motion-stack-gallery>.work-card{pointer-events:none}
+#projects .work-grid.diagonal-gallery.motion-stack-gallery>.work-card>img{pointer-events:auto;transform:scaleY(var(--edge-scale,1)) skewY(var(--edge-skew,0deg))!important;filter:var(--edge-filter,none)!important;scale:1!important}
+#projects .work-grid.diagonal-gallery.motion-stack-gallery>.work-card.is-pulled>img{translate:0 -28px}
+#projects.work{padding:0;min-height:100svh;width:100%}
+#projects .work-grid.diagonal-gallery{position:relative;display:block;width:100%;max-width:none;margin:0;height:100svh;min-height:0;padding:0;overflow:hidden;background:#000;isolation:isolate}
+#projects .work-grid.diagonal-gallery>.work-card{position:absolute;left:0;top:calc(50% - 170px);width:clamp(170px,22vw,285px);height:340px;margin:0;overflow:hidden;border:0;outline:0;box-shadow:none;transform-origin:center;animation:none!important;transition:none!important;will-change:transform;cursor:pointer}
+#projects .work-grid.diagonal-gallery>.work-card>img{display:block;width:100%;height:100%!important;max-height:none!important;object-fit:cover;transform:none!important;filter:none!important}
+#projects .work-grid.diagonal-gallery>.work-card{overflow:visible}
+#projects .work-grid.diagonal-gallery>.work-card>img{transition:translate .38s cubic-bezier(.2,.8,.2,1),scale .38s cubic-bezier(.2,.8,.2,1)!important;translate:0 0;scale:1}
+#projects .work-grid.diagonal-gallery>.work-card.is-pulled{z-index:100!important}
+#projects .work-grid.diagonal-gallery>.work-card.is-pulled>img{translate:42px -85px;scale:1.08}
+@media(prefers-reduced-motion:reduce){#projects .work-grid.diagonal-gallery>.work-card>img{transition:none!important}}
+@media(max-width:700px){#projects .work-grid.diagonal-gallery>.work-card{height:250px;top:calc(50% - 125px)}}

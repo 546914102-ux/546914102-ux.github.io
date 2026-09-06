@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    (function resetHomePosition() {
+      var reset = function () { window.scrollTo(0, 0); };
+      reset();
+      window.addEventListener('DOMContentLoaded', reset, { once: true });
+      window.addEventListener('load', function () {
+        reset();
+        requestAnimationFrame(reset);
+        setTimeout(reset, 100);
+        setTimeout(reset, 500);
+      }, { once: true });
+      window.addEventListener('pageshow', function () {
+        reset();
+        requestAnimationFrame(reset);
+        setTimeout(reset, 100);
+        setTimeout(reset, 500);
+      });
+    }());
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>Portrixe® — Creative Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fine-tune.css">
+  <link rel="stylesheet" href="homepage-video-fit.css">
+  <link rel="stylesheet" href="homepage-project-ratio.css">
+  <link rel="stylesheet" href="vice-intro.css">
+  <link rel="stylesheet" href="projects-orbit.css?v=20260903-contact-cat-blink">
+  <link rel="stylesheet" href="about-intro-video.css?v=14">
+  <link rel="stylesheet" href="custom-cursor.css?v=5">
+  <link rel="stylesheet" href="hero-title-image.css?v=1">
+  <link rel="stylesheet" href="hero-shader.css?v=3">
+  <link rel="stylesheet" href="system-gallery.css?v=1">
+  <script src="assets/system-gallery.bundle.js?v=1" defer></script>
+  <script src="assets/hero-shader.bundle.js?v=3" defer></script>
+  <script src="about-intro-video.js?v=15" defer></script>
+  <script src="vice-intro.js" defer></script>
+</head>
+<body class="vice-opening">
+  <div class="cursor"></div>
+  <div class="vice-intro" aria-label="VICE DESIGN">
+    <div class="vice-intro-word" aria-hidden="true"><span>V</span><span>I</span><span>C</span><span>E</span><i></i><span>D</span><span>E</span><span>S</span><span>I</span><span>G</span><span>N</span></div>
+  </div>
+  <header class="topbar">
+    <a class="logo" href="#home">Portfolio</a>
+    <nav><a href="#about">About</a><a href="#expertise">Projects</a><a href="#projects">Gallery</a><a href="#contact">Contact</a></nav>
+    <a class="project-link" href="#contact">@2026</a>
+    <button class="menu" aria-label="Toggle menu"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-slides">
+        <video class="slide active hero-video" autoplay muted loop playsinline preload="auto">
+          <source src="assets/hero-video-node-5.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div id="hero-shader" aria-hidden="true" data-state="pending"></div>
+      <button id="hero-shader-toggle" type="button" aria-label="切换 CRT 流体效果" aria-pressed="true">CRT ON</button>
+      <div class="hero-copy">
+        <p>Design by Vice.</p>
+        <h1><img src="assets/hero-portfolio-title.png" alt="Portfolio"><sup>®</sup></h1>
+      </div>
+      <ul class="hero-services"><li>Brand Design</li><li>IP Design</li><li>AI Creation</li></ul>
+    </section>
+
+    <section class="about section about-profile-layout" id="about">
+      <figure class="about-profile-static"><img src="assets/about-profile-full.png?v=3" alt="Personal profile and resume of Xu Jiayuan"></figure>
+    </section>
+
+    <section class="expertise section orbit-enabled" id="expertise">
+      <div class="project-orbit-stage">
+      <video class="project-orbit-background-video" src="assets/project-orbit-background-loop-v3.mp4?v=2026090303" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+      <img class="project-orbit-decoration" src="作品/裝飾.png?v=2026090301" alt="Curating striking visual and fluid designs for immersive web presentations">
+      <img class="project-orbit-decoration-secondary" src="作品/裝飾2.png?v=2026090301" alt="Year 2023 to 2026">
+      <img class="projects-frame projects-frame-top" src="作品/project/1.jpg?v=2026082803" alt="Projects heading artwork">
+      <div class="services project-carousel" aria-label="Projects orbit">
+        <article class="reveal" data-project="chaitea" role="link" tabindex="0"><video src="封面/chaitea-cover-20260902-v2.mp4" autoplay muted loop playsinline preload="auto" aria-label="ChaiTea 品牌设计项目视频封面"></video><span>01</span><h3>ChaiTea 品牌设计</h3><p>A tea brand identity connecting Guangcai heritage with modern everyday culture.</p><b>↗</b></article>
+        <article class="reveal" data-project="visual-exploration" role="link" tabindex="0"><video src="封面/9月2日.mp4?v=2026090202" autoplay muted loop playsinline preload="auto" aria-label="IP设计项目视频封面"></video><span>02</span><h3>IP设计</h3><p>An experimental image series combining art direction, motion, and AI creation.</p><b>↗</b></article>
+        <article class="reveal" data-project="green-charm" role="link" tabindex="0"><img src="assets/project-cover-1.png" alt="Virtual character IP design project"><span>03</span><h3>虚拟人IP设计</h3><p>AI visual creation inspired by nature, flowers, and contemporary oriental aesthetics.</p><b>↗</b></article>
+        <article class="reveal" data-project="fun-city" role="link" tabindex="0"><video src="assets/fun-city-cover.mp4" poster="assets/project-cover-4.png" autoplay muted loop playsinline preload="metadata" aria-label="城市生活有意思 KV设计项目视频封面"></video><span>04</span><h3>城市生活有意思 KV设计</h3><p>A vibrant urban campaign celebrating playful encounters across the city.</p><b>↗</b></article>
+        <article class="reveal" data-project="peachy-keen" role="link" tabindex="0"><video src="封面/peachy-cover-20260902.mp4" autoplay muted loop playsinline preload="auto" aria-label="Peachy Keen MV设计项目视频封面"></video><span>05</span><h3>Peachy Keen MV设计</h3><p>A dreamy pink music visual shaped by youthful energy and playful motion.</p><b>↗</b></article>
+        <article class="reveal" data-project="new-project" role="link" tabindex="0"><video src="封面/new-project-cover-20260902.mp4" autoplay muted loop playsinline preload="auto" aria-label="New Project 项目视频封面"></video><span>06</span><h3>New Project</h3><p>A new creative project is coming soon.</p><b>↗</b></article>
+      </div>
+      <img class="projects-frame projects-frame-bottom" src="作品/project/背景.jpg?v=2026082803" alt="Projects footer artwork">
+      <div class="project-orbit-hint" aria-hidden="true"><span>SCROLL</span><i></i></div>
+      </div>
+    </section>
+
+    <section class="work section" id="projects">
+      <div class="eyebrow reveal">PROJECT GALLERY</div>
+      <div class="work-grid" data-native-motion>
+        <figure class="work-card"><img src="瀑布流/1.jpg" alt="The World of Fantasy character artwork" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/2.jpg" alt="Casual wear character beside a yellow car" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/3.jpg" alt="White virtual character design artwork" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/4.jpg" alt="Blue ancient-style virtual character portrait" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/5.jpg" alt="Paired fantasy dolls character artwork" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/6.jpg" alt="Time Market embroidered merchandise collection" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/7.jpg" alt="Time Market badge merchandise design" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/8.jpg" alt="City Life editorial poster design" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/9.jpg" alt="Character working at a computer" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/10.jpg" alt="Character working while eating breakfast" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/11.jpg" alt="Character reading in a swimming pool" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/12.jpg" alt="Characters working on public transport" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/13.jpg" alt="Character working while camping" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/14.jpg" alt="Time Market bag and merchandise design" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/15.jpg" alt="Time Market plush keychain design" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/16.jpg" alt="Bobo corporate identity character design" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/17.jpg" alt="Bobo plush keychain product design" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/18.png" alt="Bobo character group in a city street" loading="lazy" decoding="async"></figure>
+        <figure class="work-card"><img src="瀑布流/19.jpg" alt="Blue cheongsam virtual character portrait with lilies" loading="lazy" decoding="async"></figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contact">
+    <p>Have a project in mind?</p><h2>Get in touch.</h2><a class="contact-video-card" href="mailto:Midorikoz@qq.com"><img src="assets/contact-cat-photo.jpg" alt="女孩抱着猫的照片" width="1080" height="1080"><span>CONTACT ME</span></a>
+    <div class="footer-bottom"><span>Wechat: KAWUNHUI</span><nav><a href="tel:13798564476">Tel - 13798564476</a></nav><span><a href="mailto:Midorikoz@qq.com">Midorikoz@qq.com</a></span></div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="fine-tune.js?v=motion-native-5"></script>
+<script src="projects-orbit.js?v=20260903-wheel-fix-v4"></script>
+<script>
+window.addEventListener("load", () => {
+  const track = document.querySelector("#expertise .services");
+  if (!track) return;
+  if (track.closest(".orbit-enabled")) return;
+  const cards = [...track.querySelectorAll("article")];
+  if (!cards.length) return;
+  const section = track.closest(".expertise");
+  const centerIndex = Math.floor(cards.length / 2);
+
+  track.setAttribute("role", "region");
+  track.setAttribute("aria-label", "Projects carousel");
+  cards.forEach((card, index) => {
+    card.tabIndex = 0;
+    card.setAttribute("aria-label", `Project ${index + 1} of ${cards.length}`);
+    const nativeLink = document.createElement("a");
+    nativeLink.className = "project-card-native-link";
+    nativeLink.href = `project.html?project=${encodeURIComponent(card.dataset.project)}`;
+    nativeLink.setAttribute("aria-label", `Open ${card.querySelector("h3")?.textContent || `project ${index + 1}`}`);
+    card.appendChild(nativeLink);
+  });
+
+  let activeIndex = 0;
+  let dragging = false;
+  let moved = false;
+  let startX = 0;
+  let startScroll = 0;
+  let scrollFrame = 0;
+
+  const nearestIndex = () => {
+    const center = track.getBoundingClientRect().left + track.clientWidth / 2;
+    let closest = 0;
+    let distance = Infinity;
+    cards.forEach((card, index) => {
+      const rect = card.getBoundingClientRect();
+      const nextDistance = Math.abs(rect.left + rect.width / 2 - center);
+      if (nextDistance < distance) {
+        distance = nextDistance;
+        closest = index;
+      }
+    });
+    return closest;
+  };
+
+  const setActive = index => {
+    activeIndex = Math.max(0, Math.min(cards.length - 1, index));
+    cards.forEach((card, cardIndex) => card.classList.toggle("is-active", cardIndex === activeIndex));
+  };
+
+  const goTo = (index, behavior = "smooth") => {
+    setActive(index);
+    cards[activeIndex].scrollIntoView({ behavior, block: "nearest", inline: "center" });
+  };
+
+  let hoverTimer = 0;
+  cards.forEach((card, index) => {
+    card.addEventListener("pointerenter", event => {
+      if (event.pointerType !== "mouse" || dragging || index === activeIndex) return;
+      clearTimeout(hoverTimer);
+      hoverTimer = setTimeout(() => goTo(index), 70);
+    });
+    card.addEventListener("pointerleave", () => clearTimeout(hoverTimer));
+  });
+
+  track.addEventListener("scroll", () => {
+    cancelAnimationFrame(scrollFrame);
+    scrollFrame = requestAnimationFrame(() => setActive(nearestIndex()));
+  }, { passive: true });
+
+  track.addEventListener("pointerdown", event => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    dragging = true;
+    moved = false;
+    startX = event.clientX;
+    startScroll = track.scrollLeft;
+    track.classList.add("is-dragging");
+    track.setPointerCapture(event.pointerId);
+  });
+
+  track.addEventListener("pointermove", event => {
+    if (!dragging) return;
+    const delta = event.clientX - startX;
+    if (Math.abs(delta) > 5) moved = true;
+    track.scrollLeft = startScroll - delta;
+  });
+
+  const finishDrag = event => {
+    if (!dragging) return;
+    const shouldOpen = !moved;
+    dragging = false;
+    track.classList.remove("is-dragging");
+    if (track.hasPointerCapture(event.pointerId)) track.releasePointerCapture(event.pointerId);
+    if (shouldOpen) {
+      const hit = document.elementFromPoint(event.clientX, event.clientY);
+      const card = hit?.closest("#expertise article[data-project]");
+      if (card?.dataset.project) {
+        window.location.assign(`project.html?project=${encodeURIComponent(card.dataset.project)}`);
+        return;
+      }
+    }
+    goTo(nearestIndex());
+  };
+  track.addEventListener("pointerup", finishDrag);
+  track.addEventListener("pointercancel", finishDrag);
+  track.addEventListener("click", event => {
+    const card = event.target.closest("article");
+    if (!card) return;
+    if (moved) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      moved = false;
+      return;
+    }
+    const index = cards.indexOf(card);
+    setActive(index);
+  }, true);
+
+  track.addEventListener("keydown", event => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    event.preventDefault();
+    goTo(activeIndex + (event.key === "ArrowRight" ? 1 : -1));
+    cards[activeIndex].focus({ preventScroll: true });
+  });
+
+  let sectionWasVisible = section.classList.contains("expertise-content-visible");
+  const sectionObserver = new MutationObserver(() => {
+    const visible = section.classList.contains("expertise-content-visible");
+    if (visible && !sectionWasVisible) requestAnimationFrame(() => goTo(centerIndex, "auto"));
+    sectionWasVisible = visible;
+  });
+  sectionObserver.observe(section, { attributes: true, attributeFilter: ["class"] });
+
+  requestAnimationFrame(() => goTo(centerIndex, "auto"));
+});
+</script>
+</body>
+</html>

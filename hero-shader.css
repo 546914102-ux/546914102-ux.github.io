@@ -1,0 +1,31 @@
+#home #hero-shader{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .65s ease;
+}
+#home.hero-shader-active #hero-shader{opacity:1}
+#projects .work-card{position:relative}
+#projects .gallery-shader{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0;transition:opacity .4s}
+#projects .gallery-shader.is-active{opacity:1}
+#projects .gallery-shader>div{width:100%;height:100%}
+#hero-shader>div{width:100%;height:100%}
+#hero-shader-toggle{
+  position:absolute;
+  bottom:28px;
+  right:max(5vw,34px);
+  z-index:6;
+  padding:8px 12px;
+  border:1px solid #ffffff55;
+  border-radius:3px;
+  background:#0007;
+  color:#fff;
+  font:11px/1.2 monospace;
+  letter-spacing:.12em;
+}
+#hero-shader-toggle:hover{background:#ffffff24}
+#hero-shader-toggle:focus-visible{outline:2px solid #fff;outline-offset:4px}
+#hero-shader-toggle:disabled{opacity:.45}
+@media(prefers-reduced-motion:reduce){#home #hero-shader{transition:none}}
